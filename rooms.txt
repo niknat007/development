@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ваше Ім'я">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номери та ціни</title>
+</head>
+<body>
+    <h1>Номери та ціни</h1>
+    <p>Оберіть найкращий номер для вашого комфорту.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про готель</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
