@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Готель "Мрія" - Контакти</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #FF6347;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      flex: 1;
+      padding: 40px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    h2 {
+      color: #FF6347;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      padding: 12px;
+      font-size: 18px;
+      background-color: #FF6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e5533d;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Контакти Готелю "Мрія"</h1>
+</header>
+
+<nav>
+  <a href="index.html">Головна</a>
+  <a href="rooms.html">Наші номери</a>
+  <a href="services.html">Послуги</a>
+</nav>
+
+<div class="container">
+
+  <!-- Контактна інформація -->
+  <h2>Наші контакти</h2>
+  <p><strong>Адреса:</strong> Іспанія, Балеарське узбережжя, вул. Сонячна, 1</p>
+  <p><strong>Телефон:</strong> +34 123 456 789</p>
+  <p><strong>Email:</strong> info@mriya-hotel.com</p>
+
+  <!-- Карта -->
+  <h2>Де ми знаходимось</h2>
+  <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.326950908756!2d2.650160515383443!3d39.56960097946762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792567bc77dd9%3A0x6c297d91f2ce950a!2zUGFsbWEgZGUgTWFsbG9yY2EsINCY0LvQvNCw0YDQvdCw0Y8!5e0!3m2!1suk!2sua!4v1710659912345!5m2!1suk!2sua"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <!-- Форма зворотного зв'язку -->
+  <h2>Зв'язатись з нами</h2>
+  <form>
+    <input type="text" placeholder="Ваше ім'я" required>
+    <textarea placeholder="Ваше повідомлення" required></textarea>
+    <button type="submit">Надіслати</button>
+  </form>
+
+</div>
+
+<footer>
+  <a href="index.html">Головна</a> |
+  <a href="rooms.html">Наші номери</a> |
+  <a href="services.html">Послуги</a>
+  <p>&copy; 2025 Готель "Мрія". Всі права захищені.</p>
+</footer>
+
+</body>
+</html>

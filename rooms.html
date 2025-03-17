@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Готель "Мрія" - Номери</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            color: #333;
+        }
+        header {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .room {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .room img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .room-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        .room-info h2 {
+            margin-bottom: 10px;
+        }
+        .room-info p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF6347;
+        }
+        .btn-book {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn-book:hover {
+            background-color: #e5533d;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            border: 3px solid black; /* Чорна рамка таблиці */
+        }
+        th, td {
+            border: 2px solid black; /* Чорні контури всіх комірок */
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #FF6347;
+            color: white;
+            font-size: 18px;
+        }
+        caption {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        colgroup col {
+            background-color: #f9f9f9;
+        }
+        .center {
+            text-align: center;
+        }
+        .right {
+            text-align: right;
+        }
+        .left {
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<header>
+    <h1>Наші Номери</h1>
+</header>
+
+<nav>
+    <a href="index.html">Головна</a>
+    <a href="services.html">Послуги</a>
+    <a href="contacts.html">Контакти</a>
+</nav>
+
+<div class="container">
+
+    <!-- Економ -->
+    <div class="room">
+        <img src="image/econom.png" alt="Економ номер"/>
+        <div class="room-info">
+            <h2>Економ Номер</h2>
+            <p>Затишний номер для одного або двох гостей з усім необхідним: Wi-Fi, телевізор, кондиціонер. Ідеально підходить для короткотривалого перебування.</p>
+            <p class="price">Ціна: 1000 грн/ніч</p>
+            <a href="contacts.html" class="btn-book">Забронювати</a>
+        </div>
+    </div>
+
+    <!-- Стандарт -->
+    <div class="room">
+        <img src="image/standard.png" alt="Стандарт номер" />
+        <div class="room-info">
+            <h2>Стандарт Номер</h2>
+            <p>Комфортний номер для двох з видом на море. Включає сніданок, Wi-Fi, кабельне телебачення, душову кабіну та балкон.</p>
+            <p class="price">Ціна: 2000 грн/ніч</p>
+            <a href="contacts.html" class="btn-book">Забронювати</a>
+        </div>
+    </div>
+
+    <!-- Люкс -->
+    <div class="room">
+        <img src="image/lux.png" alt="Люкс номер"/>
+        <div class="room-info">
+            <h2>Люкс Номер</h2>
+            <p>Розкішний просторий номер з вітальнею, великою спальнею, джакузі та панорамним видом на море. Ідеальний для романтичного відпочинку.</p>
+            <p class="price">Ціна: 5000 грн/ніч</p>
+            <a href="contacts.html" class="btn-book">Забронювати</a>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+
+    <h2>Типи номерів</h2>
+    <p>Ми пропонуємо різноманітні типи номерів для будь-якого відпочинку:</p>
+
+    <!-- Маркований список -->
+    <h3>Маркований список </h3>
+    <ul type="circle">
+        <li>Економ Номер — доступний і комфортний.</li>
+        <li>Стандарт Номер — ідеальний для пар.</li>
+        <li>Люкс — розкіш і простір для особливих моментів.</li>
+    </ul>
+
+    <!-- Нумерований список -->
+    <h3>Нумерований список </h3>
+    <ol type="I">
+        <li>Економ Номер</li>
+        <li>Стандарт Номер</li>
+        <li>Люкс Номер</li>
+    </ol>
+    <!-- Посилання для переходу на інші сторінки -->
+    <p>Більше про наші <a href="services.html#spa">SPA-послуги</a> або <a href="contacts.html#form">зв'язатися з нами</a>.</p>
+
+</div>
+<h1 style="text-align:center;">Порівняння Номерів</h1>
+<div class="container">
+    <h2>Виберіть свій ідеальний номер</h2>
+    <p>Наші номери розраховані на будь-який рівень комфорту. Від простих бюджетних варіантів до розкішних люксів з панорамним видом.</p>
+
+    <table cellspacing="10" cellpadding="10">
+        <caption>Характеристики та ціни номерів</caption>
+        <tr>
+            <th rowspan="2">Тип номера</th>
+            <th colspan="2">Послуги</th>
+            <th rowspan="2">Ціна (грн/ніч)</th>
+        </tr>
+        <tr>
+            <th>Включено</th>
+            <th>Додатково</th>
+        </tr>
+        <tr>
+            <td class="left">Економ</td>
+            <td class="center">Wi-Fi, Телебачення</td>
+            <td class="center">Сніданок</td>
+            <td class="right">1000</td>
+        </tr>
+        <tr>
+            <td class="left">Стандарт</td>
+            <td class="center">Wi-Fi, Телебачення, Сніданок</td>
+            <td class="center">Балкон з видом, Парковка</td>
+            <td class="right">2000</td>
+        </tr>
+        <tr>
+            <td class="left">Люкс</td>
+            <td class="center">Wi-Fi, Сніданок, Басейн</td>
+            <td class="center">Джакузі, Трансфер</td>
+            <td class="right">5000</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="center"><strong>Усі ціни вказані за одну ніч для двох осіб.</strong></td>
+        </tr>
+    </table>
+</div>
+
+
+<footer>
+    <a href="index.html" style="color: white;">Повернутись на головну</a> |
+    <a href="services.html" style="color: white;">Додаткові послуги</a> |
+    <a href="contacts.html" style="color: white;">Як нас знайти?</a>
+    <p>&copy; 2025 Готель "Мрія". Всі права захищені.</p>
+</footer>
+<footer>
+    <p>&copy; 2025 Готель "Мрія". Всі права захищені.</p>
+</footer>
+
+</html>
+

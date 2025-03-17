@@ -1,1 +1,136 @@
-"<html>Test</html>" 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Готель "Мрія" - Головна</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* світло-бежевий фон */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            flex: 1;
+            padding: 40px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; /* для мобільних */
+        }
+        .hotel-image {
+            width: 45%; /* менше половини */
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .description {
+            width: 50%;
+            min-width: 250px;
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn-book {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn-book:hover {
+            background-color: #e5533d;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Готель "Мрія"</h1>
+</header>
+
+<nav>
+    <a href="index.html">Головна</a>
+    <a href="rooms.html">Номери</a>
+    <a href="services.html">Послуги</a>
+    <a href="contacts.html">Контакти</a>
+</nav>
+
+<div class="container">
+    <div class="content">
+        <img src="image/hotel.png" alt="Готель Мрія" class="hotel-image"/>
+        <div class="description">
+            <p>Це чудовий готель "Мрія", розташований в сонячній Іспанії на березі Балеарського моря з чудовими краєвидами, де ви зможете дихати свіжим морським повітрям, споживати різні екзотичні фрукти та морепродукти та чудово провести час з сім'єю або близькою людиною.</p>
+            <a href="rooms.html" class="btn-book">Забронювати номер</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <p>Ласкаво просимо до нашого готелю! <a href="#about">Дізнатися більше про нас</a>.</p>
+
+    <p>Наш готель розташований на березі Балеарського моря, де кожен може насолодитися спокоєм і комфортом. Пропонуємо розкішні <a href="rooms.html">номери різних категорій</a> для будь-якого гостя.</p>
+
+    <p>Додаткові <a href="services.html#spa">послуги SPA</a> допоможуть вам розслабитися.</p>
+
+    <p>Детальну інформацію можна отримати за <a href="contacts.html#map">контактами</a>.</p>
+
+    <p>Також рекомендуємо відвідати нашого партнера — <a href="https://www.booking.com/" target="_blank">Booking.com</a>.</p>
+
+    <!-- Якір для внутрішнього переходу -->
+    <h2 id="about">Про наш готель</h2>
+    <p>Готель "Мрія" - це місце, де комфорт поєднується з природною красою. Ми пропонуємо сервіс найвищого рівня для наших гостей.</p>
+
+</div>
+<footer>
+    &copy; 2025 Готель "Мрія". Всі права захищені.
+</footer>
+
+</body>
+</html>
