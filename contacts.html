@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Готель "Мрія" - Контакти</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     * {
       margin: 0;
@@ -50,6 +51,13 @@
     h2 {
       color: #FF6347;
       margin-bottom: 15px;
+    }
+    h2 + p {
+      background-color: #fff8f0;
+      padding: 10px;
+      border-left: 4px solid #FF6347;
+      border-radius: 5px;
+      font-style: italic;
     }
     p {
       margin-bottom: 10px;
@@ -120,13 +128,11 @@
 
 <div class="container">
 
-  <!-- Контактна інформація -->
   <h2>Наші контакти</h2>
   <p><strong>Адреса:</strong> Іспанія, Балеарське узбережжя, вул. Сонячна, 1</p>
   <p><strong>Телефон:</strong> +34 123 456 789</p>
   <p><strong>Email:</strong> info@mriya-hotel.com</p>
 
-  <!-- Карта -->
   <h2>Де ми знаходимось</h2>
   <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.326950908756!2d2.650160515383443!3d39.56960097946762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792567bc77dd9%3A0x6c297d91f2ce950a!2zUGFsbWEgZGUgTWFsbG9yY2EsINCY0LvQvNCw0YDQvdCw0Y8!5e0!3m2!1suk!2sua!4v1710659912345!5m2!1suk!2sua"
@@ -138,11 +144,14 @@
           referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 
-  <!-- Форма зворотного зв'язку -->
   <h2>Зв'язатись з нами</h2>
   <form>
-    <input type="text" placeholder="Ваше ім'я" required>
-    <textarea placeholder="Ваше повідомлення" required></textarea>
+    <label>
+      <input type="text" placeholder="Ваше ім'я" required>
+    </label>
+    <label>
+      <textarea placeholder="Ваше повідомлення" required></textarea>
+    </label>
     <button type="submit">Надіслати</button>
   </form>
 
