@@ -52,15 +52,15 @@
       color: #FF6347;
       margin-bottom: 15px;
     }
+    p {
+      margin-bottom: 10px;
+    }
     h2 + p {
       background-color: #fff8f0;
       padding: 10px;
       border-left: 4px solid #FF6347;
       border-radius: 5px;
       font-style: italic;
-    }
-    p {
-      margin-bottom: 10px;
     }
     iframe {
       width: 100%;
@@ -156,7 +156,11 @@
   </form>
 
 </div>
-
+<div id="special-section" class="special-section">
+   <h3>Чому варто зв'язатись з нашим готелем "Мрія"</h3>
+   <p>Готель "Мрія" — це місце, де комфорт поєднується з теплом середземноморського клімату. Ми пропонуємо сучасні номери, вид на море, першокласне обслуговування та широкий вибір послуг для відпочинку: від SPA до екскурсій по узбережжю.</p>
+   <p>Забронюйте зараз та скористайтеся спеціальною пропозицією — знижка 15% на перше перебування!</p>
+</div>
 <footer>
   <a href="index.html">Головна</a> |
   <a href="rooms.html">Наші номери</a> |
@@ -164,5 +168,73 @@
   <p>&copy; 2025 Готель "Мрія". Всі права захищені.</p>
 </footer>
 
+<script>
+  // 1. Зміна фону на 30 секунд
+  document.body.style.backgroundColor = "#b0e0e6"; // світло-блакитний
+  setTimeout(() => {
+    document.body.style.backgroundColor = "#f5f5dc"; // назад до початкового
+  }, 30000);
+
+  // 2. Перенаправлення через location + getElementById
+  const footerLink = document.getElementById("special-section");
+  footerLink.addEventListener("dblclick", function () {
+    if (confirm("Перейти на головну сторінку?")) {
+      location.href = "index.html";
+    }
+  });
+
+  // 3. Використання querySelectorAll
+  const allParagraphs = document.querySelectorAll("p");
+  allParagraphs.forEach((p, index) => {
+    p.textContent += ` [абзац №${index + 1}]`;
+  });
+
+  // 4. Властивості innerHTML, outerHTML, nodeValue / data, textContent
+  const h2 = document.querySelector("h2");
+  console.log("innerHTML:", h2.innerHTML);
+  console.log("outerHTML:", h2.outerHTML);
+  console.log("textContent:", h2.textContent);
+
+  const strongEl = document.querySelector("strong");
+  console.log("nodeValue:", strongEl.firstChild.nodeValue); // текст всередині strong
+  console.log("data:", strongEl.firstChild.data);            // еквівалент nodeValue
+
+  // 5. Створення та вставка елементів
+  document.write("<p style='color: green'>Цей текст вставлено через document.write</p>");
+
+  const newDiv = document.createElement("div");
+  newDiv.textContent = "Це новий блок, створений через createElement та createTextNode";
+  document.body.append(newDiv);
+
+  // Вставка .append() і .prepend()
+  const container = document.querySelector(".container");
+  const info1 = document.createElement("p");
+  info1.textContent = "Це додано методом .append()";
+  container.append(info1);
+
+  const info2 = document.createElement("p");
+  info2.textContent = "Це додано методом .prepend()";
+  container.prepend(info2);
+
+  // Вставка .after()
+  const contactHeader = document.querySelector("h2");
+  const note = document.createElement("p");
+  note.textContent = "Це вставлено після першого заголовка методом .after()";
+  contactHeader.after(note);
+
+  // Заміна .replaceWith()
+  const firstStrong = document.querySelector("strong");
+  const span = document.createElement("span");
+  span.textContent = "Заміна елемента <strong> на <span>";
+  firstStrong.replaceWith(span);
+
+  // Видалення вузла .remove()
+  const toDelete = document.querySelector("form");
+  if (toDelete) {
+    setTimeout(() => {
+      toDelete.remove();
+    }, 10000); // через 10 сек видалити форму
+  }
+</script>
 </body>
 </html>
