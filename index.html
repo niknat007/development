@@ -5,22 +5,25 @@
     <title>Готель "Мрія" - Головна</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        a{
+            margin: 0 20px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body.container p a {
-            color: #008080; /* бірюзовий */
-            font-weight: bold;
-            text-decoration: none;
-        }
+        .container p a {
+             color: #008080; /* бірюзовий */
+             font-weight: bold;
+             text-decoration: none;
+         }
 
         .container p a:hover {
             color: #FF6347;
             text-decoration: underline;
         }
-
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5dc; /* світло-бежевий фон */
@@ -34,6 +37,66 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+        }
+        .float-box {
+            float: right;
+            position: relative;
+            width: 300px;
+            background-color: #ffe4b5;
+            padding: 10px 35px 10px 10px; /* додано відступ справа для кнопки */
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .float-box .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        nav a:link {
+            color: white;
+        }
+
+        nav a:visited {
+            color: #cccccc;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: yellow;
+        }
+
+        nav a:active {
+            color: red;
+        }
+
+        .container p:first-child {
+            font-weight: bold;
+            color: darkgreen;
+        }
+
+        h2::before {
+            content: "🏨 ";
+        }
+
+        h2::after {
+            content: " ✨";
+        }
+
+        .btn-book::before {
+            content: "🔔 ";
+        }
+
+        .btn-book::after {
+            content: " ➤";
         }
         nav {
             background-color: #333;
@@ -100,9 +163,41 @@
             margin-top: auto;
         }
     </style>
+    <script>
+        // alert, prompt, confirm
+        alert("Вітаємо на сайті готелю 'Мрія'!");
+        const guestName = prompt("Як вас звати?");
+        const wantsInfo = confirm("Бажаєте дізнатися більше про наш готель?");
+        if (wantsInfo) {
+            alert("Ви можете переглянути розділи Номери, Послуги та Контакти.");
+        } else {
+            alert("Дякуємо за візит!");
+        }
+
+        // функція виводу про розробника
+        function showDeveloperInfo(surname, name, position = "Адміністратор") {
+            alert(`Розробник сторінки: ${surname} ${name}, Посада: ${position}`);
+        }
+        showDeveloperInfo("Нікітченко", "Наталя");
+
+        // функція порівняння рядків
+        function compareStrings(a, b) {
+            if (a > b) {
+                alert(`Більший рядок: ${a}`);
+            } else if (a < b) {
+                alert(`Більший рядок: ${b}`);
+            } else {
+                alert("Рядки однакові.");
+            }
+        }
+        compareStrings("готель", "море");
+    </script>
+
+    <!-- Підключення зовнішнього JS-файлу -->
+    <script src="lab6.js"></script>
+
 </head>
 <body>
-
 <header>
     <h1>Готель "Мрія"</h1>
 </header>
@@ -121,15 +216,39 @@
             <p>Це чудовий готель "Мрія", розташований в сонячній Іспанії на березі Балеарського моря з чудовими краєвидами, де ви зможете дихати свіжим морським повітрям, споживати різні екзотичні фрукти та морепродукти та чудово провести час з сім'єю або близькою людиною.</p>
             <a href="rooms.html" class="btn-book">Забронювати номер</a>
         </div>
+        <div class="float-box">
+            <button class="close-btn" onclick="this.parentElement.style.display='none'">✖</button>
+            🔔 Спеціальна пропозиція: знижка 15% на перше бронювання!
+        </div>
     </div>
+    <h1>Подяка персоналу готелю "Мрія"</h1>
+    <p>Перетягніть слова, щоб сформувати подяку працівнику, який вам сподобався:</p>
+
+    <div class="gratitude-container" id="wordsContainer">
+        <div class="word">Дякую</div>
+        <div class="word">за</div>
+        <div class="word">привітність</div>
+        <div class="word">ідеальний</div>
+        <div class="word">сервіс</div>
+        <div class="word">професіоналізм</div>
+        <div class="word">турботу</div>
+        <div class="word">ввічливість</div>
+        <div class="word">усмішку</div>
+    </div>
+
+    <div class="drop-area" id="dropZone">
+        Тут буде ваша подяка...
+    </div>
+
+    <button id="submit">Надіслати подяку</button>
 </div>
 <div class="container">
-
+         
     <p>Ласкаво просимо до нашого готелю! <a href="#about">Дізнатися більше про нас</a>.</p>
 
     <p>Наш готель розташований на березі Балеарського моря, де кожен може насолодитися спокоєм і комфортом. Пропонуємо розкішні <a href="rooms.html">номери різних категорій</a> для будь-якого гостя.</p>
 
-    <p>Додаткові <a href="services.html#spa">послуги SPA</a> допоможуть вам розслабитися.</p>
+    <p>Додаткові <a href="services.html#spa"><span class="highlight">послуги SPA</span></a> допоможуть вам розслабитися.</p>
 
     <p>Детальну інформацію можна отримати за <a href="contacts.html#map">контактами</a>.</p>
 
@@ -137,11 +256,120 @@
 
     <h2 id="about">Про наш готель</h2>
     <p>Готель "Мрія" - це місце, де комфорт поєднується з природною красою. Ми пропонуємо сервіс найвищого рівня для наших гостей.</p>
+    <p style="color: #8B0000; font-style: italic; font-size: 18px; text-align: center; background-color: #f0e68c; padding: 10px; border-radius: 8px;">
+        «Іноді правильний час і правильне місце значать більше, ніж будь-який <span class="highlight-quote">п’ятизірковий готель</span> п’ятизірковий готель з розкішним міні-баром.»
+    </p>
 
+
+</div>
+<h2>Інтерактивна панель</h2>
+<div class="interactive-buttons">
+    <button class="btn-book" onclick="handleAttrClick()">Бронювання </button>
+    <button class="btn-book" id="btn-prop">Контакти </button>
+    <button class="btn-book" id="btn-multi">Пропозиція </button>
+    <button class="btn-book" id="btn-object">Об'єкт </button>
+    <button class="btn-book" id="btn-remove">Видалити </button>
 </div>
 <footer>
     &copy; 2025 Готель "Мрія". Всі права захищені.
 </footer>
+<script>
+    function handleAttrClick() {
+        alert("Переходимо до бронювання через атрибут!");
+    }
 
+    document.getElementById("btn-prop").onclick = function () {
+        alert("Переходимо до контактів через властивість!");
+    };
+
+    function showOffer() { alert("🔥 Акція: -15%"); }
+    function showUrgent() { alert("⏰ Пропозиція обмежена!"); }
+
+    const multiBtn = document.getElementById("btn-multi");
+    multiBtn.addEventListener("click", showOffer);
+    multiBtn.addEventListener("click", showUrgent);
+
+    const handlerObj = {
+        handleEvent(event) {
+            alert("Об'єкт-обробник спрацював!");
+            console.log("Подія спрацювала на:", event.currentTarget);
+        }
+    };
+    document.getElementById("btn-object").addEventListener("click", handlerObj);
+
+    function toRemove() {
+        alert("Цей обробник буде видалено після кліку.");
+        document.getElementById("btn-remove").removeEventListener("click", toRemove);
+    }
+    document.getElementById("btn-remove").addEventListener("click", toRemove);
+</script>
+
+<script>
+    let dragged = null;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    const words = document.querySelectorAll(".word");
+    const dropZone = document.getElementById("dropZone");
+
+    words.forEach(word => {
+        word.addEventListener("mousedown", function(e) {
+            dragged = word;
+            offsetX = e.offsetX;
+            offsetY = e.offsetY;
+            dragged.style.position = "absolute";
+            dragged.style.zIndex = 1000;
+            document.body.appendChild(dragged);
+        });
+    });
+    words.forEach(word => {
+        word.addEventListener("mouseover", function(event) {
+            event.target.style.backgroundColor = "#CD853F"; // темніше
+            console.log("Навели на:", event.target.textContent,
+                "| Звідки (relatedTarget):", event.relatedTarget?.textContent);
+        });
+
+        word.addEventListener("mouseout", function(event) {
+            event.target.style.backgroundColor = "#d2b48c"; // назад
+            console.log("Пішли з:", event.target.textContent,
+                "| Куди (relatedTarget):", event.relatedTarget?.textContent);
+        });
+    });
+    document.addEventListener("mousemove", function(e) {
+        if (dragged) {
+            dragged.style.left = (e.pageX - offsetX) + "px";
+            dragged.style.top = (e.pageY - offsetY) + "px";
+        }
+    });
+
+    document.addEventListener("mouseup", function(e) {
+        if (dragged) {
+            const dz = dropZone.getBoundingClientRect();
+            const wr = dragged.getBoundingClientRect();
+            if (
+                wr.right > dz.left &&
+                wr.left < dz.right &&
+                wr.bottom > dz.top &&
+                wr.top < dz.bottom
+            ) {
+                dragged.style.position = "static";
+                dropZone.appendChild(dragged);
+            } else {
+                dragged.style.position = "static";
+                document.getElementById("wordsContainer").appendChild(dragged);
+            }
+            dragged = null;
+        }
+    });
+
+    document.getElementById("submit").addEventListener("click", () => {
+        const words = Array.from(dropZone.querySelectorAll(".word")).map(w => w.textContent);
+        if (words.length > 0) {
+            alert("Подяку надіслано: " + words.join(" "));
+        } else {
+            alert("Будь ласка, сформуйте подяку перед відправкою.");
+        }
+    });
+</script>
 </body>
 </html>

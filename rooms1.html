@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Готель "Мрія" - Номери</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            color: #333;
+        }
+        header {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .room {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .room img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .room-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        .room-info h2 {
+            margin-bottom: 10px;
+        }
+        .room-info p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF6347;
+        }
+        .btn-book {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn-book:hover {
+            background-color: #e5533d;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<header>
+    <h1>Наші Номери</h1>
+</header>
+
+<nav>
+    <a href="index.html">Головна</a>
+    <a href="services.html">Послуги</a>
+    <a href="contacts.html">Контакти</a>
+</nav>
+
+<div class="container">
+
+    <div class="room">
+        <img src="image/econom.png" alt="Економ номер"/>
+        <div class="room-info">
+            <h2>Економ Номер</h2>
+            <p>Затишний номер для одного або двох гостей з усім необхідним: Wi-Fi, телевізор, кондиціонер. Ідеально підходить для короткотривалого перебування.</p>
+            <p class="price">Ціна: 1000 грн/ніч</p>
+            <a href="contacts.html" class="btn-book">Забронювати</a>
+        </div>
+    </div>
+
+    <div class="room">
+        <img src="image/standard.png" alt="Стандарт номер" />
+        <div class="room-info">
+            <h2>Стандарт Номер</h2>
+            <p>Комфортний номер для двох з видом на море. Включає сніданок, Wi-Fi, кабельне телебачення, душову кабіну та балкон.</p>
+            <p class="price">Ціна: 2000 грн/ніч</p>
+            <a href="contacts.html" class="btn-book">Забронювати</a>
+        </div>
+    </div>
+
+    <div class="room">
+        <img src="image/lux.png" alt="Люкс номер"/>
+        <div class="room-info">
+            <h2>Люкс Номер</h2>
+            <p>Розкішний просторий номер з вітальнею, великою спальнею, джакузі та панорамним видом на море. Ідеальний для романтичного відпочинку.</p>
+            <p class="price">Ціна: 5000 грн/ніч</p>
+            <a href="contacts.html" class="btn-book">Забронювати</a>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    
+    <div class="section">
+        <h2>Типи номерів</h2>
+        <p>Ми пропонуємо різноманітні типи номерів для будь-якого відпочинку:</p>
+    </div>
+
+    <h3>Маркований список </h3>
+    <ul type="circle">
+        <li>Економ Номер — доступний і комфортний.</li>
+        <li>Стандарт Номер — ідеальний для пар.</li>
+        <li>Люкс — розкіш і простір для особливих моментів.</li>
+    </ul>
+
+    <h3>Нумерований список </h3>
+    <ol type="I">
+        <li>Економ Номер</li>
+        <li>Стандарт Номер</li>
+        <li>Люкс Номер</li>
+    </ol>
+    <p>Більше про наші <a href="services.html#spa">SPA-послуги</a> або <a href="contacts.html#form">зв'язатися з нами</a>.</p>
+
+    <h3>Термінологія готелю</h3>
+    <dl>
+        <dt>Реєстрація (заселення)</dt>
+        <dd>Оформлення в’їзду гостя до готелю. Зазвичай відбувається після 14:00.</dd>
+
+        <dt>Виїзд</dt>
+        <dd>Оформлення залишення готелю, повернення ключів і оплата послуг. Як правило, до 12:00.</dd>
+
+        <dt>Все включено</dt>
+        <dd>Система обслуговування, яка включає усі прийоми їжі, напої та додаткові послуги.</dd>
+
+        <dt>Номер з окремими ліжками</dt>
+        <dd>Готельний номер, у якому є два окремі односпальні ліжка — зручно для друзів або колег.</dd>
+
+        <dt>Люкс</dt>
+        <dd>Просторий номер підвищеного комфорту, часто з окремою вітальнею, спальнею та додатковими зручностями.</dd>
+    </dl>
+
+</div>
+<div class="container">
+    <h2>Виберіть свій ідеальний номер</h2>
+    <p>Наші номери розраховані на будь-який рівень комфорту. Від простих бюджетних варіантів до розкішних люксів з панорамним видом.</p>
+
+    <table cellspacing="10" cellpadding="10">
+        <caption>Характеристики та ціни номерів</caption>
+        <tr>
+            <th rowspan="2">Тип номера</th>
+            <th colspan="2">Послуги</th>
+            <th rowspan="2">Ціна (грн/ніч)</th>
+        </tr>
+        <tr>
+            <th>Включено</th>
+            <th>Додатково</th>
+        </tr>
+        <tr><
+            <td class="left">Економ</td>
+            <td class="center">Wi-Fi, Телебачення</td>
+            <td class="center">Сніданок</td>
+            <td class="right">1000</td>
+        </tr>
+        <tr>
+            <td class="left">Стандарт</td>
+            <td class="center">Wi-Fi, Телебачення, Сніданок</td>
+            <td class="center">Балкон з видом, Парковка</td>
+            <td class="right">2000</td>
+        </tr>
+        <tr>
+            <td class="left">Люкс</td>
+            <td class="center">Wi-Fi, Сніданок, Басейн</td>
+            <td class="center">Джакузі, Трансфер</td>
+            <td class="right">5000</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="center"><strong>Усі ціни вказані за одну ніч для двох осіб.</strong></td>
+        </tr>
+    </table>
+</div>
+
+
+<footer>
+    <a href="index.html" style="color: white;">Повернутись на головну</a> |
+    <a href="services.html" style="color: white;">Додаткові послуги</a> |
+    <a href="contacts.html" style="color: white;">Як нас знайти?</a>
+    <p>&copy; 2025 Готель "Мрія". Всі права захищені.</p>
+</footer>
+<footer>
+    <p>&copy; 2025 Готель "Мрія". Всі права захищені.</p>
+</footer>
+
+
+<script>
+  // Підсвічування при кліку по <ul> і <ol> через event.target
+  function handleListClick(event) {
+    if (event.target.tagName === "LI") {
+      const parent = event.currentTarget;
+      [...parent.children].forEach(li => li.style.backgroundColor = "");
+      event.target.style.backgroundColor = "#ffe4b5";
+    }
+  }
+
+  const unorderedList = document.querySelector("ul");
+  const orderedList = document.querySelector("ol");
+
+  if (unorderedList) unorderedList.addEventListener("click", handleListClick);
+  if (orderedList) orderedList.addEventListener("click", handleListClick);
+</script>
+
+</html>
+
